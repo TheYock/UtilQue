@@ -1,0 +1,22 @@
+1. Initialize program
+2. Have user select folder directory to process
+3. check to make sure the directory has the following folders:
+	- Unprocessed
+	- Processed
+	- Markouts
+	- Completed
+4. if folders are not in directory, then create them
+5. Read each .eml file within the "Unprocessed" folder, for each file:
+	-delete all text outside of text between "[External Email]" and "End Request"
+	-save in "Markouts" folder using same name but as a .txt file
+	-move .eml file to "Processed" folder
+6. Once "Unprocessed" folder is empty then read each .txt file within "Markouts" folder and extract relevant information:
+        - ticket number
+        - Routine or Emergency(if emergency highlight red)
+        - Street address
+        - Type of work
+	- extent of work
+	- Start time
+7. Create widgets in a list showing all relevant information with a "see ticket" button at the bottom of each widget that opens the .txt file
+8. Complete markout button that prompts a confirmation, when confirmed, move file to "Completed" folder and refresh widget list.
+9. Have a refresh button to refresh the widget list as well as automatic refresh every 5 minutes.

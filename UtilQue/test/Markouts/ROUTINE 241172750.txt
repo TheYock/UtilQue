@@ -1,0 +1,61 @@
+[EXTERNAL EMAIL] **WARNING: This email originated from outside this organiz=
+ation. Please validate the sender's email address and do not click links or=
+ open attachments unless you recognize the sender and are expecting the mes=
+sage.**
+
+New Jersey One Call System        SEQUENCE NUMBER 0007    CDC =3D STF
+
+Transmit:  Date: 04/26/24   At: 15:52
+
+*** R O U T I N E         *** Request No.: 241172750
+
+Operators Notified:
+ADC     =3D COMCAST-TOMS RIVER OCEAN      AE1     =3D ATLANTIC CITY ELECTRI=
+C
+BAN     =3D VERIZON                       GPU     =3D JERSEY CENTRAL POWER =
+& LI
+NJN     =3D NEW JERSEY NATURAL GAS CO     STF     =3D STAFFORD TOWNSHIP WAT=
+ER/S
+
+Start Date/Time:    05/02/24   At 00:01  Expiration Date: 07/02/24
+
+Location Information:
+County: OCEAN                  Municipality: STAFFORD
+Subdivision/Community: MANAHAWKIN
+Street:               1984 MILL CREEK RD
+Nearest Intersection: BENJAMIN BLVD
+Other Intersection:
+Lat/Lon:
+Type of Work: INSTALL FOOTINGS
+Block:                Lot:                Depth: 2FT
+Extent of Work: CURB TO ENTIRE PROPERTY.
+Remarks:
+  Working For Contact:  BOB NOLLA
+  This Excavation Notification is required by N.J.S.A. 48:2-73 et seq. In t=
+he
+  event of any ambiguity, discrepancy or confusion between the written
+  description of the specific site location and any other reference materia=
+ls,
+  the written description of the specific site location shall be the legal
+  description as required by N.J.S.A 48:2-82. Maps, diagrams, illustrations=
+,
+  or other reference materials shall not be considered the legal descriptio=
+n
+  of the excavation site regardless of their source.
+
+Working For: HOMEOWNER
+Address:     1984 MILL CREEK RD
+City:        MANAHAWKIN, NJ  08050
+Phone:       732-300-5827   Ext:
+
+Excavator Information:
+Caller:      JIM KASZUBA
+Phone:       609-294-3562   Ext:
+
+Excavator:   JIM KASZUBA MASONRY
+Address:     8 CABLE DR
+City:        LITTLE EGG HARBOR, NJ  08087
+Phone:       609-294-3562   Ext:          Fax:  609-294-3654
+Cellular:    609-548-1723
+Email:       JLKKASZUBA@AOL.COM
+End Request

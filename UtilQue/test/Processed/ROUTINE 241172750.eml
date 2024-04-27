@@ -1,0 +1,347 @@
+Delivered-To: utilque@gmail.com
+Received: by 2002:a54:3306:0:b0:253:b909:993d with SMTP id h6csp571008ecq;
+        Fri, 26 Apr 2024 13:48:36 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH6WhVlkEML7AhNK82DkjfIxFfvLITW7gPkW+zpAMMXdSpATPB27kVBpRy0pypz8lLJmO5y
+X-Received: by 2002:a05:620a:1591:b0:790:8721:367b with SMTP id d17-20020a05620a159100b007908721367bmr4778809qkk.47.1714164516104;
+        Fri, 26 Apr 2024 13:48:36 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1714164516; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=Mb+BPN+TCieFGgMCLVTB7nmxOZZZH6jKk/hBPYSRTmxZOlx2BEhCEqMhlL4CwJB0JF
+         WfXb81KIIKdJ5yzIf+sfnOjBJnYa+djkqRFhJDQLJvJhNRecedCnU+hdLpm/ELOySI8f
+         gGPirSFS+fEYFCltYE3Txv/VuBHvVMsTS+Nvcg8WWzr8UWrI72K4pOgbq6cFchjHMdf2
+         Ot97249QxhghjjA8vBwqYajsldPbodLLrZXLt+nxNjQon3V3SSqAE/MiGt/gLzU4ZYGq
+         00gDTUk/ZhtoAMAOy3zipdf5JOA6PFVjQUxKcwF35bma0BMyX3sx2TH8bbNQMxrCkQeS
+         g9SQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=jhmjZS6DznpWszIpGMY0vnvOa7t9BZ0mg/e8u+Tv4xU=;
+        fh=wC6GuUK+lJG1GMCF6q+2DndVDorC371fzG5Fj7hcXXM=;
+        b=DdUyqMBU0MUz1mo6etidNRdEoRD9NkyTD2+SMl6+9Flist/nRz5e5dMxukOpoObVdp
+         J/YlrFcCybKoDsZlU+oRcZY9zedWbcwrff1xaC7d+LfqZzKwDi+RepHMI68pH5Cwy0i0
+         z8wCi1sLTUscw2RGN271xbiuttzWSFmI24zmwDCIqWxciA2hjxtxi4+oZYZmdxI5+xMQ
+         K6WrAhtacylbK/aaXkklAqHqTcfEcGO148RAy/MFqQmBn5XmUFY3XAV+aVzleWLQZxbK
+         hC2mII9KSd8pDj0D6Lajvz76RQexcBWp5BwvuOZ6UDk5eSxL2OwR99ANGVgvy0dub5ax
+         4OQw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@Staffordpolice.onmicrosoft.com header.s=selector2-Staffordpolice-onmicrosoft-com header.b=NDLbDsiz;
+       arc=pass (i=1 spf=pass spfdomain=staffordnj.gov dkim=pass dkdomain=staffordnj.gov dmarc=pass fromdomain=staffordnj.gov);
+       spf=pass (google.com: domain of gwyockachonis@staffordnj.gov designates 2a01:111:f403:c111::e as permitted sender) smtp.mailfrom=gwyockachonis@staffordnj.gov
+Return-Path: <gwyockachonis@staffordnj.gov>
+Received: from DS0PR09CU002.outbound.protection.outlook.com (mail-centralusazlp17012000e.outbound.protection.outlook.com. [2a01:111:f403:c111::e])
+        by mx.google.com with ESMTPS id d2-20020a37c402000000b0078d77f93e76si18840915qki.348.2024.04.26.13.48.35
+        for <utilque@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 26 Apr 2024 13:48:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of gwyockachonis@staffordnj.gov designates 2a01:111:f403:c111::e as permitted sender) client-ip=2a01:111:f403:c111::e;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@Staffordpolice.onmicrosoft.com header.s=selector2-Staffordpolice-onmicrosoft-com header.b=NDLbDsiz;
+       arc=pass (i=1 spf=pass spfdomain=staffordnj.gov dkim=pass dkdomain=staffordnj.gov dmarc=pass fromdomain=staffordnj.gov);
+       spf=pass (google.com: domain of gwyockachonis@staffordnj.gov designates 2a01:111:f403:c111::e as permitted sender) smtp.mailfrom=gwyockachonis@staffordnj.gov
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=CzASRnp6H1NLGwZPfDdro25bvLHB/uQOzGUJZ+S/cFRbnxzzaCQqYIJkEGVsQrSixgKPWW68O2ljKOZQlsybTpOcP4Jv/YW4l/KePGhP8pt032ANzVXsIGEM/tOs6gtZmvz68NfUZlCDC5oyTYm9CIQhPyfzHawWXfgW6ZtHGZk7NKVyGD+8xKY9GgLt2iuzTUcC3v+US4y4bvm6ZL9FeWRtt0RQi4y4xNg2ra4+/BXeGwnuQBScuKq1ies4W28uVn/J+kHEID9e3eiuja+4mcYaMDyoMr0AxP1LFHwkn1QqPWi1GnKbdAuh8cLr5uL2bBAi+pUpj6kn3Dh8erzFtw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=jhmjZS6DznpWszIpGMY0vnvOa7t9BZ0mg/e8u+Tv4xU=;
+ b=WJxCSAR1kuWwhC/1CoA45L6eX0YtC0JjAMzXDJsPftRQALitGQPYl4t9vowaG7bauZhKvMISRAUY9kbrxXlkrVsfyZhgsBsqO1Xv9BgbsHo03cFDC0TBdTbtaWpSA4AduFPRBhG8NXgbc6kMuapg7K0QXB4Gnk/64fuqpSF8tS5T3I2AfwctTnNvPXiewR/PBUZ3Okb/y3soh+/EUvKHsO3vluFQrTCrOJ5ZiQSt3zbmlbFVSjjkrnJxcNzDbl9c7T7V6Rk/Dnh2YkzEBvNnLqNeYgRu3PeQcHKBdqOss9uifPlT1DUiRHIPoqNFufYzKOMihvhzBaE0h0A9yfHowA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=staffordnj.gov; dmarc=pass action=none
+ header.from=staffordnj.gov; dkim=pass header.d=staffordnj.gov; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=Staffordpolice.onmicrosoft.com; s=selector2-Staffordpolice-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=jhmjZS6DznpWszIpGMY0vnvOa7t9BZ0mg/e8u+Tv4xU=;
+ b=NDLbDsizV+BmqnlvvRqq3N22tcEi7uaHh7ql6pOnnZ6GpMsgT3iTw2XzArrR+lvfnOkZRJoQn0nmLmjqRtLHvuHyF60tERPqQSxAIoBb6rNuoZAqF82FNCreM9RxN/fhsCJYIVMOW8xZ0ZuAgFjqFkk4BpqPCLQ3xnKXLDWciG0=
+Received: from CO6PR09MB7751.namprd09.prod.outlook.com (2603:10b6:303:c3::19)
+ by PH0PR09MB11837.namprd09.prod.outlook.com (2603:10b6:510:2a9::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7519.24; Fri, 26 Apr
+ 2024 20:48:33 +0000
+Received: from CO6PR09MB7751.namprd09.prod.outlook.com
+ ([fe80::69a9:5bf7:4b5a:987b]) by CO6PR09MB7751.namprd09.prod.outlook.com
+ ([fe80::69a9:5bf7:4b5a:987b%3]) with mapi id 15.20.7519.030; Fri, 26 Apr 2024
+ 20:48:32 +0000
+From: George Yockachonis Jr. <gwyockachonis@staffordnj.gov>
+To: "utilque@gmail.com" <utilque@gmail.com>
+Subject: ROUTINE  241172750
+Thread-Topic: ROUTINE  241172750
+Thread-Index: AQHamBNK3qDNgP5dDkuEtwkacL/ClbF7BfhT
+Date: Fri, 26 Apr 2024 20:48:32 +0000
+Message-ID:
+ <CO6PR09MB7751524F07DBA1F5DE613931CE162@CO6PR09MB7751.namprd09.prod.outlook.com>
+References: <20240426195232.AD8A964F42@nj.occinc.com>
+In-Reply-To: <20240426195232.AD8A964F42@nj.occinc.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=staffordnj.gov;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CO6PR09MB7751:EE_|PH0PR09MB11837:EE_
+x-ms-office365-filtering-correlation-id: a86976b6-b78b-41c6-52d8-08dc66323c6c
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230031|366007|1800799015|41320700004|38070700009;
+x-microsoft-antispam-message-info:
+ =?us-ascii?Q?sQZncjLi0WeRh57IWVhCQb9RM4mmIjfVhCTu8jEKkhznBKy6400lPeqeTkMN?=
+ =?us-ascii?Q?KP6SpWSnlI25XEMTkGZs+BsRzgQNVcj0qUpBUIWdgeWSfD/SHmLDsy//gnqN?=
+ =?us-ascii?Q?ULwVb81a1Rk/nF3n5ean30gIWmmiggTdyEUCkUrBT7mMVijJfGWsX/OTk4o4?=
+ =?us-ascii?Q?3ooKgd4eK6KplpSUX/5uw87esOUhPPU317iWa8TC15qjSGYMZADuKEpLK9so?=
+ =?us-ascii?Q?S5Py/fBXjPCTlx7ETqDlxyEnoto+nQOIYffOKp6OnSFqbNOAjw3aPwOECQRc?=
+ =?us-ascii?Q?vcwr2XEBcD6CaToFlzQCsDwxK4NAp5kWnO6hEzFUGdkkQBwr8ksNVZQO+Y4l?=
+ =?us-ascii?Q?ZGAEU/x04ToNT/uG4UebQFXDEdIBf7bWbQktFNQbvcoaBa8UfGxBzzUC+JsJ?=
+ =?us-ascii?Q?6Xj8Jbkojp+uRFATXo/7k/b/xEzg1ge3pCWZxdfMT8mfVzvkGIqn9L/v6xC5?=
+ =?us-ascii?Q?0DNJEQ3eITDjeLppVLnc5Kgrt5cotGhJ1NnS3YZhRExAMHe3J12+PtU5PEhV?=
+ =?us-ascii?Q?Pr3pNwCVKycAPdiw30HNBz4HhRi8mt0E0buRHlZSG19CW1vfYpYx8MeBs8cy?=
+ =?us-ascii?Q?WL0xcfEMmhkKJJHNYBOlFcO6aMy3xOzqzMlV50ZDvstQbOPGxMB0OeBOfxIu?=
+ =?us-ascii?Q?c8JpHJGbKiPey/On5reYF9SN4R7xhvUoX2WfYVr5lrQaNtmvEs8uP3i/sk4r?=
+ =?us-ascii?Q?XzfdD5v/jR+nEeJtRjNZMFcqNwhtdcERqhtz7MC+VYVO/c5hRoNeONNMCS2V?=
+ =?us-ascii?Q?n3fHIYMOPzyO/n3GqSM//nSt9bQAJWX5OCRynN71ZAskh4+m1jjjkB64rE+H?=
+ =?us-ascii?Q?3jza1qLje3TvnPuyjXznD7Ch++yQMmhBcPfYvUOZfnMQuqL0c+B38gsv56Ws?=
+ =?us-ascii?Q?TVtw7K1mBYwMSXt3w0X7iBie/XSSqr+08MXcARWF4efr1LdrFQjixZX6D/3H?=
+ =?us-ascii?Q?CeEMrN25YJZwoW77GZBvgpqNXcs/O2Oey+Id0FydComtdBbzMBOjVucIfAUY?=
+ =?us-ascii?Q?8OkofRbeOfYgHw1q3Y9KVlHWT0LNKvsn2og+5SlHK9XA3rQWSvacjF8VBmxj?=
+ =?us-ascii?Q?4vsBu+UL/JTFiJSA62lWHreSo9+ow8///+PvNFU/nuN4FHgnAimek/dlqc9u?=
+ =?us-ascii?Q?aYJ2j3w5E86Ra/DRmx5j2Bcj9OQSIFUtLcec60tiSEV0U8SwIlwLaVZvC0Ts?=
+ =?us-ascii?Q?HQ75g6J1l3XREMYmw4CqQEQAGq8BmGC5j9jOPxkkn5DFDtys6uO2AbwrsUTt?=
+ =?us-ascii?Q?OfSr7SLm9LUTWFXluAwLVOL1jFXEcz6SvJ5fo9VBGw=3D=3D?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CO6PR09MB7751.namprd09.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(366007)(1800799015)(41320700004)(38070700009);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?a0qpR0pOkbCEU/qUuJiFYHqXhGdo27dxePTWSnlUAX2xJl3r8pXcca7/izbD?=
+ =?us-ascii?Q?OkXaxAVIy9fNNXT4SfIp1SGPVBTVWCCL0qGDVlE2qrSLZow6klLQq4/0TSRV?=
+ =?us-ascii?Q?bE7vU0BmiD2usgRVwvZbu4s85g3iPc9IxDZ3TksZfMMUzZzVOSiShsIhgh9Y?=
+ =?us-ascii?Q?yXcLezGz4nNrVUBVRv9km3tx75G6xNSLzilfKl8DY+HiseQA6RodYf1OjtPD?=
+ =?us-ascii?Q?XaO8ht9w3ulqfuYc+fmPT5lL1E/0l/NkiRPGYEPBrrhHMz215YtchsT+OCw3?=
+ =?us-ascii?Q?H/wTXn06TPCppFFDZuLKvj/Wp3TA7XewxkA5lD2ydi899T5LdNfV4Zv8tQWX?=
+ =?us-ascii?Q?s3JoaLjb0Ut3QGFwR8BVAoVRA9GJmrDU7iFFfCq+lJPUKSJNhes8TElzRY8h?=
+ =?us-ascii?Q?1VHkWEyKEqn07X/leXxr/ZEf4bYJfhfgNleJmpve58nismxeq7KF64xKDNTg?=
+ =?us-ascii?Q?aJBTLEgaURilAZJVFBCzb4wVAjjv3yMKrzoR57CNWJOXhv9I9ChlHxNZi+w7?=
+ =?us-ascii?Q?L7g/tDlLqmAk0M73erQnKR9eM/XI6SBgvqoTiDwMOvUxoSfxl8y64NYT3z0/?=
+ =?us-ascii?Q?70VulA+JL33+SivYWLTug2T/2pJ5E+kGTr846rssB44TGmNcKW6JyYFuCfZk?=
+ =?us-ascii?Q?fm4RdNbq2U5T0TAP89f3J+W83jXqHK3j3zVNpeBhz5F02AOKjIWaLAwsyf1n?=
+ =?us-ascii?Q?cUJTcPMIYTNY88hgIVQWqxbVk4OgiJpEmaxdVQeGDVr9In1Bxd+oXvrhd5h1?=
+ =?us-ascii?Q?cGvrueraxrb0J4hWKDJftopVIMASwMyx73Mf50BmvuW7aJD/RVP9z2fvu9g+?=
+ =?us-ascii?Q?aJXN+vVm7vu7Z2E9k3YA0WWECO2J75FMpGhuf/3hBr8hhQ/34VWqyzMN8HBb?=
+ =?us-ascii?Q?w1oDL+bU01GMcGogo8cN20QAYd/Trh4OFsxt8AOY+BektCOdFtY3n8OTutIc?=
+ =?us-ascii?Q?4XPnC4UvRRtflSSL7vz0akP4p1AkSGfRK/sCWT9LS2gOM4fKVWOSdXKkP+d4?=
+ =?us-ascii?Q?1Kz3q8gpq9biS8Lvisq5jmxTictxqKHBh/CLuyh+GiN9SfUN7vazkjE8Ro9m?=
+ =?us-ascii?Q?FUGyqiO2U9pb2Zauk1p3EOu3LppTbKdTeEsb0SynYhNS9WvC99KIVcuAriR9?=
+ =?us-ascii?Q?dGXoXZvElK5xcoNChrRywKhj973tkmLFBcNPFkVl8U/Ph45+vTUF8VF7EHfX?=
+ =?us-ascii?Q?c+6OYSFpfxOinZAKJNNFjTtxuoXVrXuyH8ZBqpnZWFZG75JX8cE0jlvAPazm?=
+ =?us-ascii?Q?MKNFW0eMhNVjRtyha7w/+Bt0vUgRM/JpuBEhazo0Mt5rLyeo5c4BkA4/ptfQ?=
+ =?us-ascii?Q?AL3H0EU6lGRIwK48iy6QUpB7xZ00wBrfmBeEN1AAZsfKIH80Xw4h2ByJT49S?=
+ =?us-ascii?Q?xVYEav+ahFjcctmTXkzvsmTmPmfnMol2tVmGGBVICyZVd2z2lPQzk5gt9zMF?=
+ =?us-ascii?Q?+ieh1HoYCm4er5EJ/nldO+y/XM2b7rlPzsF3xW4RQwwAr4TlqHI8jtZGTudn?=
+ =?us-ascii?Q?Zoev+ahyaKPH9kopJhm70/8fOs6Y1QYhavN6jqCBq7VbHxDhzhvtxkvgtan8?=
+ =?us-ascii?Q?RMjETCXbz8Cxz7frGx+H4j36uWZtC4YvkRZ4IfNUuZ2fW2GOKTah3BIl2iDf?=
+ =?us-ascii?Q?MW8IqPpTtnSlOfvSSUpL0oA=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_CO6PR09MB7751524F07DBA1F5DE613931CE162CO6PR09MB7751namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: staffordnj.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CO6PR09MB7751.namprd09.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: a86976b6-b78b-41c6-52d8-08dc66323c6c
+X-MS-Exchange-CrossTenant-originalarrivaltime: 26 Apr 2024 20:48:32.7871
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: f1791f03-7ac6-4b38-83a1-f17a20e64617
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR09MB11837
+
+--_000_CO6PR09MB7751524F07DBA1F5DE613931CE162CO6PR09MB7751namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Get Outlook for iOS<https://aka.ms/o0ukef>
+________________________________
+From: nj@occinc.com <nj@occinc.com>
+Sent: Friday, April 26, 2024 3:52:32 PM
+To: George Yockachonis Jr. <gwyockachonis@staffordnj.gov>
+Subject: ROUTINE 241172750
+
+[EXTERNAL EMAIL] **WARNING: This email originated from outside this organiz=
+ation. Please validate the sender's email address and do not click links or=
+ open attachments unless you recognize the sender and are expecting the mes=
+sage.**
+
+New Jersey One Call System        SEQUENCE NUMBER 0007    CDC =3D STF
+
+Transmit:  Date: 04/26/24   At: 15:52
+
+*** R O U T I N E         *** Request No.: 241172750
+
+Operators Notified:
+ADC     =3D COMCAST-TOMS RIVER OCEAN      AE1     =3D ATLANTIC CITY ELECTRI=
+C
+BAN     =3D VERIZON                       GPU     =3D JERSEY CENTRAL POWER =
+& LI
+NJN     =3D NEW JERSEY NATURAL GAS CO     STF     =3D STAFFORD TOWNSHIP WAT=
+ER/S
+
+Start Date/Time:    05/02/24   At 00:01  Expiration Date: 07/02/24
+
+Location Information:
+County: OCEAN                  Municipality: STAFFORD
+Subdivision/Community: MANAHAWKIN
+Street:               1984 MILL CREEK RD
+Nearest Intersection: BENJAMIN BLVD
+Other Intersection:
+Lat/Lon:
+Type of Work: INSTALL FOOTINGS
+Block:                Lot:                Depth: 2FT
+Extent of Work: CURB TO ENTIRE PROPERTY.
+Remarks:
+  Working For Contact:  BOB NOLLA
+  This Excavation Notification is required by N.J.S.A. 48:2-73 et seq. In t=
+he
+  event of any ambiguity, discrepancy or confusion between the written
+  description of the specific site location and any other reference materia=
+ls,
+  the written description of the specific site location shall be the legal
+  description as required by N.J.S.A 48:2-82. Maps, diagrams, illustrations=
+,
+  or other reference materials shall not be considered the legal descriptio=
+n
+  of the excavation site regardless of their source.
+
+Working For: HOMEOWNER
+Address:     1984 MILL CREEK RD
+City:        MANAHAWKIN, NJ  08050
+Phone:       732-300-5827   Ext:
+
+Excavator Information:
+Caller:      JIM KASZUBA
+Phone:       609-294-3562   Ext:
+
+Excavator:   JIM KASZUBA MASONRY
+Address:     8 CABLE DR
+City:        LITTLE EGG HARBOR, NJ  08087
+Phone:       609-294-3562   Ext:          Fax:  609-294-3654
+Cellular:    609-548-1723
+Email:       JLKKASZUBA@AOL.COM
+End Request
+
+
+--_000_CO6PR09MB7751524F07DBA1F5DE613931CE162CO6PR09MB7751namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+</head>
+<body>
+<div dir=3D"ltr">
+<div dir=3D"ltr"><br>
+</div>
+<div id=3D"ms-outlook-mobile-signature">
+<div><br>
+</div>
+Get <a href=3D"https://aka.ms/o0ukef">Outlook for iOS</a></div>
+</div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> nj@occinc.com &lt;nj@=
+occinc.com&gt;<br>
+<b>Sent:</b> Friday, April 26, 2024 3:52:32 PM<br>
+<b>To:</b> George Yockachonis Jr. &lt;gwyockachonis@staffordnj.gov&gt;<br>
+<b>Subject:</b> ROUTINE 241172750</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:11pt;=
+">
+<div class=3D"PlainText">[EXTERNAL EMAIL] **WARNING: This email originated =
+from outside this organization. Please validate the sender's email address =
+and do not click links or open attachments unless you recognize the sender =
+and are expecting the message.**<br>
+<br>
+New Jersey One Call System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEQUEN=
+CE NUMBER 0007&nbsp;&nbsp;&nbsp; CDC =3D STF<br>
+<br>
+Transmit:&nbsp; Date: 04/26/24&nbsp;&nbsp; At: 15:52<br>
+<br>
+*** R O U T I N E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *** Reque=
+st No.: 241172750<br>
+<br>
+Operators Notified:<br>
+ADC&nbsp;&nbsp;&nbsp;&nbsp; =3D COMCAST-TOMS RIVER OCEAN&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp; AE1&nbsp;&nbsp;&nbsp;&nbsp; =3D ATLANTIC CITY ELECTRIC<br>
+BAN&nbsp;&nbsp;&nbsp;&nbsp; =3D VERIZON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp; GPU&nbsp;&nbsp;&nbsp;&nbsp; =3D JERSEY CENTRAL POWER =
+&amp; LI<br>
+NJN&nbsp;&nbsp;&nbsp;&nbsp; =3D NEW JERSEY NATURAL GAS CO&nbsp;&nbsp;&nbsp;=
+&nbsp; STF&nbsp;&nbsp;&nbsp;&nbsp; =3D STAFFORD TOWNSHIP WATER/S<br>
+<br>
+Start Date/Time:&nbsp;&nbsp;&nbsp; 05/02/24&nbsp;&nbsp; At 00:01&nbsp; Expi=
+ration Date: 07/02/24<br>
+<br>
+Location Information:<br>
+County: OCEAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Municipality: STAFFORD<br>
+Subdivision/Community: MANAHAWKIN<br>
+Street:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp; 1984 MILL CREEK RD<br>
+Nearest Intersection: BENJAMIN BLVD<br>
+Other Intersection:<br>
+Lat/Lon:<br>
+Type of Work: INSTALL FOOTINGS<br>
+Block:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp; Lot:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Depth: 2FT<br>
+Extent of Work: CURB TO ENTIRE PROPERTY.<br>
+Remarks:<br>
+&nbsp; Working For Contact:&nbsp; BOB NOLLA<br>
+&nbsp; This Excavation Notification is required by N.J.S.A. 48:2-73 et seq.=
+ In the<br>
+&nbsp; event of any ambiguity, discrepancy or confusion between the written=
+<br>
+&nbsp; description of the specific site location and any other reference ma=
+terials,<br>
+&nbsp; the written description of the specific site location shall be the l=
+egal<br>
+&nbsp; description as required by N.J.S.A 48:2-82. Maps, diagrams, illustra=
+tions,<br>
+&nbsp; or other reference materials shall not be considered the legal descr=
+iption<br>
+&nbsp; of the excavation site regardless of their source.<br>
+<br>
+Working For: HOMEOWNER<br>
+Address:&nbsp;&nbsp;&nbsp;&nbsp; 1984 MILL CREEK RD<br>
+City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MANAHAWKIN, NJ&nbsp; 08050<=
+br>
+Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 732-300-5827&nbsp;&nbsp; Ext:<br=
+>
+<br>
+Excavator Information:<br>
+Caller:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JIM KASZUBA<br>
+Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 609-294-3562&nbsp;&nbsp; Ext:<br=
+>
+<br>
+Excavator:&nbsp;&nbsp; JIM KASZUBA MASONRY<br>
+Address:&nbsp;&nbsp;&nbsp;&nbsp; 8 CABLE DR<br>
+City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LITTLE EGG HARBOR, NJ&nbsp;=
+ 08087<br>
+Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 609-294-3562&nbsp;&nbsp; Ext:&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fax:&nbsp; 609-294-3654=
+<br>
+Cellular:&nbsp;&nbsp;&nbsp; 609-548-1723<br>
+Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JLKKASZUBA@AOL.COM<br>
+End Request<br>
+<br>
+</div>
+</span></font></div>
+</body>
+</html>
+
+--_000_CO6PR09MB7751524F07DBA1F5DE613931CE162CO6PR09MB7751namp_--

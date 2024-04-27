@@ -1,0 +1,62 @@
+[EXTERNAL EMAIL] **WARNING: This email originated from outside this organiz=
+ation. Please validate the sender's email address and do not click links or=
+ open attachments unless you recognize the sender and are expecting the mes=
+sage.**
+
+New Jersey One Call System        SEQUENCE NUMBER 0001    CDC =3D STF
+
+Transmit:  Date: 04/24/24   At: 07:25
+
+*** E M E R G E N C Y     *** Request No.: 241150159
+
+Operators Notified:
+ADC     =3D COMCAST-TOMS RIVER OCEAN      AE1     =3D ATLANTIC CITY ELECTRI=
+C
+AM2     =3D AT&T CORP                     BAN     =3D VERIZON
+GPU     =3D JERSEY CENTRAL POWER & LI     NJN     =3D NEW JERSEY NATURAL GA=
+S CO
+STF     =3D STAFFORD TOWNSHIP WATER/S
+
+Start Date/Time:    04/24/24   At 07:15  Expiration Date:
+
+Location Information:
+County: OCEAN                  Municipality: STAFFORD
+Subdivision/Community: WARREN GROVE
+Street:               1408 CO RD 539
+Nearest Intersection: SIMM PLACE RD
+Other Intersection:
+Lat/Lon:
+Type of Work: EMERGENCY - REPAIR/REPLACE WELL FACILITY
+Block: 4              Lot:  11.01         Depth: 100FT
+Extent of Work: CURB TO ENTIRE PROPERTY.
+Remarks:
+  CUSTOMER WITHOUT SERVICE
+  Working For Contact:  ALFRED SMITH
+  This Excavation Notification is required by N.J.S.A. 48:2-73 et seq. In t=
+he
+  event of any ambiguity, discrepancy or confusion between the written
+  description of the specific site location and any other reference materia=
+ls,
+  the written description of the specific site location shall be the legal
+  description as required by N.J.S.A 48:2-82. Maps, diagrams, illustrations=
+,
+  or other reference materials shall not be considered the legal descriptio=
+n
+  of the excavation site regardless of their source.
+
+Working For: HOMEOWNER
+Address:     1408 CO RD 539
+City:        BARNEGAT, NJ  08005
+Phone:       609-698-4385   Ext:
+
+Excavator Information:
+Caller:      TED ZAREMBA
+Phone:       732-237-2440   Ext:
+
+Excavator:   TED'S WELL SERVICE
+Address:     495 WHEATON AVE
+City:        BAYVILLE, NJ  08721
+Phone:       732-237-2440   Ext:          Fax:  732-237-8780
+Cellular:    609-548-0138
+Email:       tedswellservice@aol.com
+End Request

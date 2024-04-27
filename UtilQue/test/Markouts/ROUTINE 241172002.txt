@@ -1,0 +1,63 @@
+[EXTERNAL EMAIL] **WARNING: This email originated from outside this organiz=
+ation. Please validate the sender's email address and do not click links or=
+ open attachments unless you recognize the sender and are expecting the mes=
+sage.**
+
+New Jersey One Call System        SEQUENCE NUMBER 0016    CDC =3D SBO
+
+Transmit:  Date: 04/26/24   At: 13:50
+
+*** R O U T I N E         *** Request No.: 241172002
+
+Operators Notified:
+ADC     =3D COMCAST-TOMS RIVER OCEAN      AE1     =3D ATLANTIC CITY ELECTRI=
+C
+BAN     =3D VERIZON                       NJN     =3D NEW JERSEY NATURAL GA=
+S CO
+OCE     =3D OCEAN COUNTY ENGINEERING      SBO     =3D SHIP BOTTOM, BOROUGH =
+OF
+
+Start Date/Time:    05/02/24   At 07:00  Expiration Date: 07/02/24
+
+Location Information:
+County: OCEAN                  Municipality: SHIP BOTTOM
+Subdivision/Community:
+Street:               0 E 8TH ST
+Nearest Intersection: LONG BEACH BLVD
+Other Intersection:
+Lat/Lon:
+Type of Work: INSTALL CONDUIT
+Block:                Lot:                Depth: 10FT
+Extent of Work: M/O BEGINS AT C/L OF INTERSECTION AND EXTENDS 100FT E.  CUR=
+B
+  TO 50FT BEHIND BOTH CURBS.  CURB TO CURB.
+Remarks:
+  Working For Contact:  MIKE POTE
+  This Excavation Notification is required by N.J.S.A. 48:2-73 et seq. In t=
+he
+  event of any ambiguity, discrepancy or confusion between the written
+  description of the specific site location and any other reference materia=
+ls,
+  the written description of the specific site location shall be the legal
+  description as required by N.J.S.A 48:2-82. Maps, diagrams, illustrations=
+,
+  or other reference materials shall not be considered the legal descriptio=
+n
+  of the excavation site regardless of their source.
+
+Working For: NJDOT
+Address:     1035 PARKWAY AVE
+City:        TRENTON, NJ  08625
+Phone:       732-962-0354   Ext:
+
+Excavator Information:
+Caller:      CHARLES BERENATO
+Phone:       609-561-0722   Ext:
+
+Excavator:   BERENATO CONTRACTORS
+Address:     160 S 2ND RD
+City:        HAMMONTON, NJ  08037
+Phone:       609-561-0722   Ext:          Fax:  609-561-8027
+Cellular:    856-229-1525
+Email:       office@berenatocontractors.com
+End Request
