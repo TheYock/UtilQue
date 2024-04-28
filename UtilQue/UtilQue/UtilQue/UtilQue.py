@@ -11,6 +11,7 @@ class UtilQueApp:
         self.ticket_widgets = []
         self.folder_path = None  # Initialize folder_path attribute
         self.created_tickets = set()  # Initialize set to store ticket numbers of created widgets
+        self.frame_containers = []
 
         # Create a frame to contain the status text and scrollbar
         self.status_frame = tk.Frame(height=50, width=200)
@@ -166,6 +167,7 @@ class UtilQueApp:
                 # Check if widget for this ticket already exists
                 ticket_number = ticket_info["Ticket Number"]
                 if ticket_number not in self.created_tickets:
+                    self.organize_ticket_widgets()
                     # Create ticket widget
                     ticket_widget = TicketWidget(self.widget_list_frame, self, ticket_info, filename)
                     ticket_widget.pack(fill="x", padx=10, pady=5)
@@ -244,6 +246,52 @@ class UtilQueApp:
         for widget in self.ticket_widgets:
             if widget != selected_widget:
                 widget.deselect()
+                
+    def create_frame_container(self, title):
+        # Create a new frame container
+        frame_container = tk.Frame(self.widget_list_frame, bg="white", bd=1, relief=tk.RIDGE)
+        frame_container.title_label = tk.Label(frame_container, text=title, bg="gray", fg="white", padx=5, pady=2)
+        frame_container.title_label.pack(fill=tk.X)
+        frame_container.widgets_frame = tk.Frame(frame_container, bg="white")
+        frame_container.widgets_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Add the frame container to the list
+        self.frame_containers.append(frame_container)
+        
+        # Add the frame container to the canvas
+        frame_container.pack(fill=tk.X, padx=10, pady=5, ipady=5)
+
+    # Method to move ticket widgets into a frame container
+    def move_widgets_to_container(self, container_index, ticket_widgets):
+        if 0 <= container_index < len(self.frame_containers):
+            frame_container = self.frame_containers[container_index]
+            for widget in ticket_widgets:
+                widget.pack_forget()  # Remove widget from its current position
+                widget.pack(fill="x", padx=10, pady=5, in_=frame_container.widgets_frame)
+                
+    def organize_ticket_widgets(self):
+        # Check if frame containers for Emergency and Routine tickets already exist
+        emergency_container_exists = False
+        routine_container_exists = False
+        for container in self.frame_containers:
+            if container.title_label.cget("text") == "Emergency Tickets":
+                emergency_container_exists = True
+            elif container.title_label.cget("text") == "Routine Tickets":
+                routine_container_exists = True
+
+        # Create frame containers if they don't already exist
+        if not emergency_container_exists:
+            self.create_frame_container("Emergency Tickets")
+        if not routine_container_exists:
+            self.create_frame_container("Routine Tickets")
+
+        # Organize ticket widgets into frame containers
+        emergency_widgets = [widget for widget in self.ticket_widgets if widget.ticket_info.get("Routine or Emergency") == "Emergency"]
+        routine_widgets = [widget for widget in self.ticket_widgets if widget.ticket_info.get("Routine or Emergency") == "Routine"]
+
+        # Move widgets to the appropriate containers
+        self.move_widgets_to_container(0, emergency_widgets)
+        self.move_widgets_to_container(1, routine_widgets)
 
 class TicketWidget(tk.Frame):
     def __init__(self, master, util_que_app, ticket_info, filename):
@@ -257,23 +305,24 @@ class TicketWidget(tk.Frame):
     def create_widgets(self):
         # Check if ticket type is "Emergency" and set background color to red
         bg_color = "#ff9999" if self.ticket_info.get("Routine or Emergency") == "Emergency" else "white"
-        self.configure(bg=bg_color, highlightbackground="white", highlightcolor="white", highlightthickness=1)
+        self.configure(bg=bg_color)
 
         # Create labels for ticket information
         for i, (key, value) in enumerate(self.ticket_info.items()):
-            label = tk.Label(self, text=f"{key}: {value}", anchor="w", padx=5, pady=3)
+            # Adjust label border, relief style, and highlightthickness
+            label = tk.Label(self, text=f"{key}: {value}", anchor="w", padx=5, pady=3, bg=bg_color)
             label.grid(row=i//3, column=i%3, sticky="w")
 
         # Create the Open File button
-        open_file_button = tk.Button(self, text="Show Ticket", command=self.open_txt_file)
+        open_file_button = tk.Button(self, text="Show Ticket", command=self.open_txt_file, bg="#444444", fg="white")
         open_file_button.grid(row=3, column=0, sticky="we")
 
         # Create a blank column
-        blank_label = tk.Label(self, text="", padx=5, pady=3)
+        blank_label = tk.Label(self, text="", padx=5, pady=3, bg=bg_color)
         blank_label.grid(row=3, column=1)
 
         # Create the Complete Ticket button
-        complete_button = tk.Button(self, text="Complete", command=self.complete_ticket)
+        complete_button = tk.Button(self, text="Complete", command=self.complete_ticket, bg="#444444", fg="white")
         complete_button.grid(row=3, column=2, sticky="we")
 
         self.bind("<Enter>", self.hover)
@@ -286,8 +335,10 @@ class TicketWidget(tk.Frame):
             else:
                 bg_color = "lightblue"  # Light blue for routine
             self.configure(bg=bg_color)
-            for label in self.winfo_children():
-                label.configure(background=bg_color, foreground="black")
+            # Find and configure the labels and buttons
+            for child in self.winfo_children():
+                if isinstance(child, (tk.Label)):
+                    child.configure(bg=bg_color, fg="black")
 
     def unhover(self, event=None):
         if not self.selected:
@@ -296,8 +347,10 @@ class TicketWidget(tk.Frame):
             else:
                 bg_color = "white"  # Reset to white for routine
             self.configure(bg=bg_color)
-            for label in self.winfo_children():
-                label.configure(background=bg_color, foreground="black")
+            # Find and configure the labels and buttons
+            for child in self.winfo_children():
+                if isinstance(child, (tk.Label)):
+                    child.configure(bg=bg_color, fg="black")
 
 
     def open_txt_file(self):
@@ -341,13 +394,13 @@ def main():
     root.state('zoomed')
 
     # Configure background color of the root window and foreground color of all text
-    root.configure(bg="#333333")
+    root.configure(bg="gray")
 
     # Configure specific widget colors
     root.option_add("*Button.Background", "#444444")  # Dark gray for buttons
     root.option_add("*Button.Foreground", "white")     # White text on buttons
-    root.option_add("*Label.Background", "#333333")    # Dark gray for labels
-    root.option_add("*Label.Foreground", "white")      # White text on labels
+    #root.option_add("*Label.Background", "white")    # Dark gray for labels
+    #root.option_add("*Label.Foreground", "black")      # White text on labels
 
     # Create and pack widgets
     app = UtilQueApp(root)
